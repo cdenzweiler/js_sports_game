@@ -8,12 +8,14 @@ const tscore = document.querySelector("#teamone-numgoals")
 
 tshoot.addEventListener("click", function () {
     console.log("T1 shoots");
+var audioElement = new Audio("https://actions.google.com/sounds/v1/alarms/beep_short.ogg")
+    audioElement.play();
 
     tnumValue = Number(tnum.innerHTML) + 1;
     tnum.innerHTML = tnumValue;
 
     var y = Math.floor(Math.random() * 10);
-    var x = Number(5);
+    var x = Number(7);
 
     console.log(y)
 
@@ -31,14 +33,19 @@ const t2shoot = document.querySelector("#teamtwo-shoot-button")
 const t2num = document.querySelector("#teamtwo-numshots")
 let t2score = document.querySelector("#teamtwo-numgoals")
 
+
 t2shoot.addEventListener("click", function () {
     console.log("T2 shoots");
+
+var audioElement = new Audio("https://actions.google.com/sounds/v1/weather/thunder_crack.ogg");
+    audioElement.volume = 0.5;
+    audioElement.play();
 
     t2numValue = Number(t2num.innerHTML) + 1;
     t2num.innerHTML = t2numValue
 
-    var y = Math.floor(Math.random() * 8);
-    var x = Number(3);
+    var y = Math.floor(Math.random() * 10);
+    var x = Number(5);
 
     console.log(y)
 
@@ -57,6 +64,7 @@ const reset = document.querySelector("#reset-button")
 const rnum = document.querySelector("#num-resets")
 
 
+
 reset.addEventListener("click", function () {
     console.log("reset")
     tnum.innerHTML = 0
@@ -66,8 +74,7 @@ reset.addEventListener("click", function () {
     rnumValue = Number(rnum.innerHTML) + 1;
     rnum.innerHTML = rnumValue;
 
-    
+var audioElement = new Audio("https://actions.google.com/sounds/v1/impacts/crash.ogg")
+    audioElement.volume = 0.5;
+    audioElement.play();
 })
-                // WIP //
-//              Bonus               ///
-// let audio = document.querySelector(au)
